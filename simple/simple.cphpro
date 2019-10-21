@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project mainfile="main.cph" name="simple">
+  <tools>
+    <tool path="D:\Caph\bin\caphc" name="caphc"/>
+    <tool path="D:\graphviz-2.38\release\bin\dotty.exe" name="dotViewer"/>
+    <tool path="D:\ImageGlass\ImageGlass.exe" name="pgmViewer"/>
+  </tools>
+  <options>
+    <option type="attr" value="D:\Caph\lib\caph" name="-I" category="systemc"/>
+    <option type="attr" value="200" name="-sc_stop_time" category="systemc"/>
+  </options>
+  <actions>
+  </actions>
+</project>
