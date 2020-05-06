@@ -1,0 +1,9 @@
+./vhdl\sobel_expanded.dot
+./vhdl\sobel_net.vhd
+./vhdl\sobel_globals.vhd
+./vhdl\sobel_types.vhd
+./vhdl\thr_act.vhd
+./vhdl\asum_act.vhd
+./vhdl\conv233a_act.vhd
+./vhdl\sobel_tb.vhd
+./vhdl\sobel_splitters.vhd

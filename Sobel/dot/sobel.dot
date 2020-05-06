@@ -1,0 +1,18 @@
+digraph g {
+n2 [shape=invtriangle,label="r"];
+n1 [shape=invtriangle,label="i"];
+n6 [shape=record,style=rounded,label="<id>conv233a(...,0,0)|{{<e0>|<e1>|<e2>}|{<s0>|<s1>|<s2>}}"];
+n10 [shape=record,style=rounded,label="<id>conv233a(...,0,0)|{{<e0>|<e1>|<e2>}|{<s0>|<s1>|<s2>}}"];
+n11 [shape=record,style=rounded,label="<id>asum|{{<e0>|<e1>}|{<s0>}}"];
+n12 [shape=record,style=rounded,label="<id>thr(80)|{{<e0>}|{<s0>}}"];
+n1:s0 -> n6:e0 [label=" :signed<12> dc"];
+n6:s1 -> n6:e1 [label=" :signed<12>"];
+n6:s2 -> n6:e2 [label=" :signed<12>"];
+n1:s0 -> n10:e0 [label=" :signed<12> dc"];
+n10:s1 -> n10:e1 [label=" :signed<12>"];
+n10:s2 -> n10:e2 [label=" :signed<12>"];
+n6:s0 -> n11:e0 [label=" :signed<12> dc"];
+n10:s0 -> n11:e1 [label=" :signed<12> dc"];
+n11:s0 -> n12:e0 [label=" :signed<12> dc"];
+n12:s0 -> n2:e0 [label=" :unsigned<8> dc"];
+}

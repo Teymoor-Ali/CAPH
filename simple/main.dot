@@ -1,0 +1,14 @@
+digraph g {
+n2 [shape=invtriangle,label="outp"];
+n1 [shape=invtriangle,label="inp"];
+n3 [shape=record,style=rounded,label="<id>dup|{{<e0>}|{<s0>|<s1>}}"];
+n4 [shape=record,style=rounded,label="<id>inc|{{<e0>}|{<s0>}}"];
+n5 [shape=record,style=rounded,label="<id>dec|{{<e0>}|{<s0>}}"];
+n6 [shape=record,style=rounded,label="<id>mul|{{<e0>|<e1>}|{<s0>}}"];
+n1:s0 -> n3:e0 [label=" :unsigned<8>"];
+n3:s0 -> n4:e0 [label=" :unsigned<8>"];
+n3:s1 -> n5:e0 [label=" :unsigned<8>"];
+n4:s0 -> n6:e0 [label=" :unsigned<8>"];
+n5:s0 -> n6:e1 [label=" :unsigned<8>"];
+n6:s0 -> n2:e0 [label=" :unsigned<8>"];
+}

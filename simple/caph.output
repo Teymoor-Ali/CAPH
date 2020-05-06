@@ -1,1 +1,7 @@
-./sim\result.txt
+.\main_expanded.dot
+.\main_net.vhd
+.\dup_act.vhd
+.\mul_act.vhd
+.\dec_act.vhd
+.\inc_act.vhd
+.\main_tb.vhd

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project mainfile="main.cph" name="sobel">
+  <tools>
+    <tool path="E:\Caph\bin\caphc" name="caphc"/>
+    <tool path="E:\GraphWiz\bin\dotty.exe" name="dotViewer"/>
+    <tool path="E:\ImageGlass\ImageGlass.exe" name="pgmViewer"/>
+  </tools>
+  <options>
+    <option type="attr" value="E:\Caph\lib\caph" name="-I" category="vhdl"/>
+    <option type="attr" value="ifile=pcb.pgm" name="-D" category="vhdl"/>
+    <option type="attr" value="threshold=80" name="-D" category="vhdl"/>
+    <option type="unit" value="true" name="-suppress_cast_warnings" category="vhdl"/>
+    <option type="attr" value="sobel_fifo_stats.dat" name="-vhdl_annot_file" category="vhdl"/>
+    <option type="attr" value="E:\Caph\lib\caph" name="-I" category="systemc"/>
+    <option type="attr" value="ifile=pcb.pgm" name="-D" category="systemc"/>
+    <option type="attr" value="threshold=80" name="-D" category="systemc"/>
+    <option type="unit" value="true" name="-suppress_cast_warnings" category="systemc"/>
+    <option type="unit" value="true" name="-sc_abbrev_dc_ctors" category="systemc"/>
+    <option type="attr" value="1000" name="-sc_stop_when_idle" category="systemc"/>
+    <option type="unit" value="true" name="-sc_dump_fifo_stats" category="systemc"/>
+    <option type="attr" value="E:\Caph\lib\caph" name="-I" category="simu"/>
+    <option type="attr" value="ifile=pcb.pgm" name="-D" category="simu"/>
+    <option type="attr" value="threshold=80" name="-D" category="simu"/>
+    <option type="unit" value="true" name="-suppress_cast_warnings" category="simu"/>
+    <option type="unit" value="true" name="-abbrev_dc_ctors" category="simu"/>
+    <option type="unit" value="true" name="-warn_channels" category="simu"/>
+    <option type="unit" value="true" name="-dump_channel_stats" category="simu"/>
+    <option type="attr" value="E:\Caph\lib\caph" name="-I" category="dot"/>
+    <option type="attr" value="ifile=pcb.pgm" name="-D" category="dot"/>
+    <option type="attr" value="threshold=80" name="-D" category="dot"/>
+    <option type="unit" value="true" name="-suppress_cast_warnings" category="dot"/>
+  </options>
+  <actions>
+    <action type="post" command="E:\Caph\bin\txt2pgm" args="-abbrev 255 sim/result.txt sim/result.pgm"/>
+    <action type="pre" command="E:\Caph\bin\pgm2txt" args="-abbrev pcb.pgm pcb.txt"/>
+  </actions>
+</project>
