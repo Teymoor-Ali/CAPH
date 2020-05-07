@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project mainfile="main.cph" name="conv33_v1">
+  <tools>
+    <tool path="E:\Caph\bin\caphc" name="caphc"/>
+    <tool path="E:\GraphWiz\bin\dotty.exe" name="dotViewer"/>
+    <tool path="E:\ImageGlass\ImageGlass.exe" name="pgmViewer"/>
+  </tools>
+  <options>
+    <option type="attr" value="E:\Caph\lib\caph" name="-I" category="vhdl"/>
+    <option type="attr" value="conv33_v1_fifo_stats.dat" name="-vhdl_annot_file" category="vhdl"/>
+    <option type="attr" value="ifile=lena64.pgm" name="-D" category="vhdl"/>
+    <option type="attr" value="E:\Caph\lib\caph" name="-I" category="systemc"/>
+    <option type="attr" value="130" name="-sc_default_fifo_capacity" category="systemc"/>
+    <option type="attr" value="200000" name="-sc_stop_time" category="systemc"/>
+    <option type="unit" value="true" name="-sc_dump_fifo_stats" category="systemc"/>
+    <option type="attr" value="ifile=lena64.pgm" name="-D" category="systemc"/>
+    <option type="unit" value="true" name="-sc_abbrev_dc_ctors" category="systemc"/>
+    <option type="attr" value="E:\Caph\lib\caph" name="-I" category="simu"/>
+    <option type="attr" value="68" name="-chan_cap" category="simu"/>
+    <option type="attr" value="ifile=lena64.pgm" name="-D" category="simu"/>
+    <option type="unit" value="true" name="-abbrev_dc_ctors" category="simu"/>
+    <option type="attr" value="E:\Caph\lib\caph" name="-I" category="dot"/>
+    <option type="attr" value="ifile=lena64.pgm" name="-D" category="dot"/>
+  </options>
+  <actions>
+    <action type="post" command="E:\Caph\bin\txt2pgm" args="-abbrev 255 sim/result2.txt sim/result2.pgm"/>
+    <action type="post" command="E:\Caph\bin\txt2pgm" args="-abbrev 255 sim/result1.txt sim/result1.pgm"/>
+    <action type="pre" command="E:\Caph\bin\pgm2txt" args="-abbrev lena64.pgm lena64.txt"/>
+  </actions>
+</project>

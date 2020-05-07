@@ -1,0 +1,10 @@
+./vhdl\conv33_v1_expanded.dot
+./vhdl\conv33_v1_net.vhd
+./vhdl\conv33_v1_globals.vhd
+./vhdl\conv33_v1_types.vhd
+./vhdl\abs_act.vhd
+./vhdl\maddn_act.vhd
+./vhdl\d1lr_act.vhd
+./vhdl\d1p_act.vhd
+./vhdl\conv33_v1_tb.vhd
+./vhdl\conv33_v1_splitters.vhd
